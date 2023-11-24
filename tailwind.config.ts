@@ -15,8 +15,9 @@ export default {
         muertos: "url(/img/patrones/muertos.png)",
         papel: "url(/img/patrones/papel.png)",
 
-        radio1: "url(/img/radio1.jpeg)",
-        radio2: "url(/img/programas/valor.jpeg)",
+        radio1: "url(/img/programas/valor.jpeg)",
+        radio2: "url(/img/programas/abundancia.jpeg)",
+        radio3: "url(/img/programas/reflexion.jpeg)",
 
         manuel: "url(/img/manuel-vera.jpeg)",
         kikis: "url(/img/kikis.jpeg)",

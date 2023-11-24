@@ -23,7 +23,7 @@ export default function Programa() {
           <p className=" max-w-lg mx-auto mt-4 font-extralight">
             Todos los días, de <strong>{program.hora}</strong> , tienes una cita
             con <strong>{program.locutor}</strong>.{program.bio} . Puedes
-            escuchar el programa en <strong>Radio Chilanga</strong>
+            escuchar el programa en <strong>elconnosotros.com</strong>
           </p>
         </div>
       </main>

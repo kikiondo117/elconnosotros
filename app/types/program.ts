@@ -6,4 +6,5 @@ export type ProgramType = {
   image: string;
   url?: string;
   bio?: string;
+  dia: string;
 };

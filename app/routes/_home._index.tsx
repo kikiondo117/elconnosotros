@@ -36,7 +36,8 @@ export default function Index() {
               >
                 <div className="h-full flex flex-col justify-end hover:translate-y-9 transition-all ease-in-out">
                   <p className="text-red-500 bg-white w-fit px-4 py-2 ">
-                    Lunes a domingo {programa.hora}
+                    <strong className="text-black">{programa.dia}</strong> -
+                    {programa.hora}
                   </p>
 
                   <p className="bg-gray-800 w-fit text-white p-4">
@@ -65,12 +66,6 @@ export default function Index() {
               subTitle="Manuel Vera"
             />
           </a>
-
-          <Host
-            className="bg-secret bg-center bg-cover"
-            title="Loading..."
-            subTitle="Proximamente"
-          />
 
           <a
             target={"_blank"}
