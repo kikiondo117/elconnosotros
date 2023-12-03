@@ -10,17 +10,17 @@ export default function Programa() {
 
   return (
     <div className="">
-      <h1 className="flex justify-center p-4 text-4xl font-light my-8 md:my-24  md:text-6xl ">
+      <h1 className="my-8 flex justify-center p-4 text-4xl font-light text-white  md:my-24 md:text-6xl ">
         {program.nombre}
       </h1>
 
-      <main className="p-8 flex flex-wrap rounded-md bg-white min-h-screen h-fit py-16 justify-center gap-8">
+      <main className="flex h-fit min-h-screen flex-wrap justify-center gap-8 rounded-md bg-white p-8 py-16">
         <div>
           <div
-            className={`${program.image} w-full bg-center bg-no-repeat h-96 mx-auto`}
+            className={`${program.image} mx-auto h-96 w-full bg-center bg-no-repeat`}
           />
 
-          <p className=" max-w-lg mx-auto mt-4 font-extralight">
+          <p className=" mx-auto mt-4 max-w-lg font-extralight">
             Todos los días, de <strong>{program.hora}</strong> , tienes una cita
             con <strong>{program.locutor}</strong>.{program.bio} . Puedes
             escuchar el programa en <strong>elconnosotros.com</strong>
@@ -29,7 +29,7 @@ export default function Programa() {
       </main>
 
       {/* ANCHOR Information */}
-      <section className="container mx-auto flex flex-wrap justify-center gap-4 my-12 md:gap-0  md:justify-between md:my-40">
+      <section className="container mx-auto my-12 flex flex-wrap justify-center gap-4 md:my-40  md:justify-between md:gap-0">
         <Post title="Radio Chilanga">
           <p>
             Dándole un respiro a los habitantes de la Ciudad de México con
@@ -51,7 +51,7 @@ export default function Programa() {
             href="https://www.facebook.com/profile.php?id=100076177904911"
           >
             <img
-              className="w-8 h-8"
+              className="h-8 w-8"
               src="https://1.bp.blogspot.com/-S8HTBQqmfcs/XN0ACIRD9PI/AAAAAAAAAlo/FLhccuLdMfIFLhocRjWqsr9cVGdTN_8sgCPcBGAYYCw/s1600/f_logo_RGB-Blue_1024.png"
               alt="facebook"
             />

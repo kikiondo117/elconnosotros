@@ -1,3 +1,4 @@
+import { Link, useLoaderData } from "@remix-run/react";
 // * Assets
 import * as programming from "~/utils/programacion";
 // * Components
@@ -7,10 +8,11 @@ import { Player } from "~/components/Player/Player";
 import { SectionBanner } from "~/components/SectionBanner/SectionBanner";
 import { Host } from "~/components/Host/Host";
 import { Post } from "~/components/Post/Post";
-import { Link } from "@remix-run/react";
 import { phrases } from "~/utils/phrases";
 
 export default function Index() {
+  const dailyPhrase = useLoaderData<typeof loader>();
+
   return (
     <>
       {/* ANCHOR Player section */}
@@ -35,8 +37,7 @@ export default function Index() {
       </main>
 
       {/* ANCHOR Programs */}
-
-      <section className="my-28">
+      <section id="programs" className="my-28">
         <SectionBanner
           title="Nuestros programas"
           subtitle="de lunes a domingo"
@@ -72,12 +73,12 @@ export default function Index() {
         <h4 className="text-2xl text-yellow-300">Frase del dia</h4>
         <div className="flex max-w-md  items-center">
           <LiaBibleSolid className="text-9xl" />
-          <em>{phrases[Math.floor(Math.random() * 10)]}</em>
+          <em>{dailyPhrase}</em>
         </div>
       </section>
 
       {/* ANCHOR Hosts */}
-      <section className="mb-12 mt-12">
+      <section id="preachers" className="mb-12 mt-12">
         <SectionBanner title="Nuestros equipo" subtitle="team" />
 
         <div className="mt-16 flex flex-wrap justify-center  gap-8 md:justify-between  md:gap-0">
@@ -126,4 +127,9 @@ export const meta = () => {
     { title: "Radio Chilanga" },
     { name: "description", content: "Radio Mexican" },
   ];
+};
+
+export const loader = async () => {
+  const daily = phrases[Math.floor(Math.random() * 10)];
+  return daily;
 };
