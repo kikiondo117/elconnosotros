@@ -1,13 +1,14 @@
 // * Assets
 import * as programming from "~/utils/programacion";
 // * Components
-
+import { LiaBibleSolid } from "react-icons/lia/index.js";
 // * Custom Components
 import { Player } from "~/components/Player/Player";
 import { SectionBanner } from "~/components/SectionBanner/SectionBanner";
 import { Host } from "~/components/Host/Host";
 import { Post } from "~/components/Post/Post";
 import { Link } from "@remix-run/react";
+import { phrases } from "~/utils/phrases";
 
 export default function Index() {
   return (
@@ -66,9 +67,18 @@ export default function Index() {
         </div>
       </section>
 
+      {/* ANCHOR Day Phrase */}
+      <section className="flex h-screen flex-col items-center justify-center gap-4 text-white">
+        <h4 className="text-2xl text-yellow-300">Frase del dia</h4>
+        <div className="flex max-w-md  items-center">
+          <LiaBibleSolid className="text-9xl" />
+          <em>{phrases[Math.floor(Math.random() * 10)]}</em>
+        </div>
+      </section>
+
       {/* ANCHOR Hosts */}
       <section className="mb-12 mt-12">
-        <SectionBanner title="Nuestros hosts" subtitle="Equipo de ElyYo" />
+        <SectionBanner title="Nuestros equipo" subtitle="team" />
 
         <div className="mt-16 flex flex-wrap justify-center  gap-8 md:justify-between  md:gap-0">
           <a
