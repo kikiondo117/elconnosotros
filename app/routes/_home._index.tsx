@@ -4,7 +4,7 @@ import * as programming from "~/utils/programacion";
 
 // * Custom Components
 import { Player } from "~/components/Player/Player";
-import { Section } from "~/components/Section/Section";
+import { SectionBanner } from "~/components/SectionBanner/SectionBanner";
 import { Host } from "~/components/Host/Host";
 import { Post } from "~/components/Post/Post";
 import { Link } from "@remix-run/react";
@@ -12,6 +12,7 @@ import { Link } from "@remix-run/react";
 export default function Index() {
   return (
     <>
+      {/* ANCHOR Player section */}
       <section
         id="play"
         className="flex flex-col items-center my-12 md:flex-row md:justify-around md:my-24  md:h-[30rem]"
@@ -21,9 +22,12 @@ export default function Index() {
         </div>
       </section>
 
-      {/* ANCHOR Programas */}
+      {/* ANCHOR Programs */}
       <section className="my-28">
-        <Section title="Nuestros programas" subtitle="de lunes a domingo" />
+        <SectionBanner
+          title="Nuestros programas"
+          subtitle="de lunes a domingo"
+        />
 
         <div className="flex flex-wrap  justify-center mb-12 md:justify-between mt-12 gap-12">
           {programming.programas.map((programa) => {
@@ -52,7 +56,10 @@ export default function Index() {
 
       {/* ANCHOR Hosts */}
       <section className="mb-12 mt-12">
-        <Section title="Nuestros hosts" subtitle="EQUIPO DE RADIO CHILANGA" />
+        <SectionBanner
+          title="Nuestros hosts"
+          subtitle="EQUIPO DE RADIO CHILANGA"
+        />
 
         <div className="flex flex-wrap justify-center gap-8  md:justify-between md:gap-0  mt-16">
           <a
@@ -83,20 +90,15 @@ export default function Index() {
 
       {/* ANCHOR Information */}
       <section className="flex flex-wrap justify-center gap-4 my-12 md:gap-0  md:justify-between md:my-40">
-        <Post title="Radio Chilanga">
+        <Post title="El y Yo">
           <p>
-            Dándole un respiro a los habitantes de la Ciudad de México con
-            programas clasicos desde la perspectiva más chilanga.
+            Elyyo, donde el amor de Dios encuentra su eco en cada canción. 
+            ¡Bienvenidos a un viaje espiritual único, diseñado especialmente para ti!"
           </p>
         </Post>
 
-        <Post title="CEO">
-          <p>
-            Nuestro objetivo es crear contenido digital de calidad. Planeamos
-            ser una de las plataformas top de Latinoamericas.
-          </p>
-        </Post>
-
+       
+{/* 
         <Post title="¡Síguenos!">
           <a
             className="flex items-center gap-4"
@@ -109,7 +111,7 @@ export default function Index() {
               alt="facebook"
             />
           </a>
-        </Post>
+        </Post> */}
       </section>
     </>
   );

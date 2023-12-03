@@ -4,7 +4,11 @@ export function Navbar() {
   return (
     <nav className="bg-transparent flex flex-wrap gap-4  justify-between items-center">
       <Link to="/" className="flex gap-2">
-        <img src="/img/logo.png" alt="Radio chilanga" className=" w-24 h-12" />
+        <img
+          src="/img/icons/hands.png"
+          alt="elyyo homepage"
+          className=" w-14 h-12"
+        />
       </Link>
 
       <ul className="ml-auto md:m-0">
