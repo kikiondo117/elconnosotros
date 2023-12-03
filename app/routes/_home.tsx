@@ -9,6 +9,7 @@ export default function HomeLayout() {
           <Navbar />
         </header>
 
+
         <Outlet />
       </div>
 

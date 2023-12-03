@@ -7,7 +7,7 @@ export function Navbar() {
         <img
           src="/img/icons/hands.png"
           alt="elyyo homepage"
-          className=" w-14 h-12"
+          className=" w-12 h-12 bg-white rounded-full"
         />
       </Link>
 

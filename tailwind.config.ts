@@ -21,9 +21,7 @@ export default {
       },
       backgroundImage: {
         main: "url('/img/test3.jpeg')",
-        patron: "url(/img/patron.avif)",
-        muertos: "url(/img/patrones/muertos.png)",
-        papel: "url(/img/patrones/papel.png)",
+        paloma: "url(/img/patrones/paloma.png)",
 
         radio1: "url(/img/programas/valor.jpeg)",
         radio2: "url(/img/programas/abundancia.jpeg)",

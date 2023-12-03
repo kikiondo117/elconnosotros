@@ -31,7 +31,7 @@ export default function App() {
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <Links />
       </head>
-      <body>
+      <body className="bg-slate-900">
         <Outlet />
         <ScrollRestoration />
         <Scripts />
