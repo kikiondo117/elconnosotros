@@ -9,12 +9,11 @@ export function SectionBanner(props: Props) {
   return (
     <div>
       <div className="relative">
-        <h3 className="text-2xl bg-white p-8 text-black w-fit  gap-2 xl:text-5xl rounded-md flex items-center">
+        <h3 className="flex w-fit items-end gap-2 rounded-md  bg-white p-8 text-2xl text-black desktop:text-4xl">
           {props.title}
-          <GiVhs />
         </h3>
 
-        <p className="absolute left-0 bottom-0 transform -translate-x-4 translate-y-9 bg-blue-500 text-white p-2 capitalize">
+        <p className="absolute bottom-0 left-0 -translate-x-4 translate-y-9 transform bg-blue-500 p-2 capitalize text-white">
           {props.subtitle}
         </p>
       </div>

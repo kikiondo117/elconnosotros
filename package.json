@@ -21,6 +21,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",
     "react-kawaii": "^0.18.0",
+    "react-multi-carousel": "^2.8.4",
     "shx": "^0.3.4",
     "tailwind-merge": "^2.0.0"
   },

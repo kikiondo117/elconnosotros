@@ -13,42 +13,50 @@ export default function Index() {
   return (
     <>
       {/* ANCHOR Player section */}
-      <section
+      <main
         id="play"
-        className="flex flex-col items-center my-12 md:flex-row md:justify-around md:my-24  md:h-[30rem]"
+        className="my-12 flex flex-col items-center md:my-24 md:h-[30rem] md:flex-row  md:justify-around"
       >
-        <div className="bg-red-500 rounded-xl h-56 w-56 overflow-hidden">
-          <img src="/img/player/paloma.jpeg" />
+        <div className="flex flex-col items-center gap-4">
+          <h1 className=" text-2xl font-semibold text-white">
+            Bienvenidos a ElyYo
+          </h1>
+          <h2 className="text-white"> Tu Conexión Celestial en la Red</h2>
+
+          <div className="h-56 w-56 overflow-hidden rounded-xl bg-red-500">
+            <img src="/img/player/paloma.jpeg" />
+          </div>
         </div>
 
         <div className="my-8 md:m-0">
           <Player />
         </div>
-      </section>
+      </main>
 
       {/* ANCHOR Programs */}
+
       <section className="my-28">
         <SectionBanner
           title="Nuestros programas"
           subtitle="de lunes a domingo"
         />
 
-        <div className="flex flex-wrap  justify-center mb-12 md:justify-between mt-12 gap-12">
+        <div className="mb-12 mt-12  flex flex-wrap justify-center gap-12 md:justify-between">
           {programming.programas.map((programa) => {
             return (
               <Link
                 to={`/program/${programa.id}`}
                 key={programa.locutor}
-                className={`bg-gray-special rounded-sm w-96 h-64 tablet:w-96 capitalize 
-                 cursor-pointer bg-center ${programa.image}`}
+                className={`h-64 w-96 cursor-pointer rounded-sm bg-gray-special bg-center 
+                 capitalize tablet:w-96 ${programa.image}`}
               >
-                <div className="h-full flex flex-col justify-end hover:translate-y-9 transition-all ease-in-out">
-                  <p className="text-red-500 bg-white w-fit px-4 py-2 ">
+                <div className="flex h-full flex-col justify-end transition-all ease-in-out hover:translate-y-9">
+                  <p className="w-fit bg-white px-4 py-2 text-red-500 ">
                     <strong className="text-black">{programa.dia}</strong> -
                     {programa.hora}
                   </p>
 
-                  <p className="bg-gray-800 w-fit text-white p-4">
+                  <p className="w-fit bg-gray-600 p-4 text-white">
                     {programa.nombre}
                   </p>
                 </div>
@@ -60,19 +68,16 @@ export default function Index() {
 
       {/* ANCHOR Hosts */}
       <section className="mb-12 mt-12">
-        <SectionBanner
-          title="Nuestros hosts"
-          subtitle="EQUIPO DE RADIO CHILANGA"
-        />
+        <SectionBanner title="Nuestros hosts" subtitle="Equipo de ElyYo" />
 
-        <div className="flex flex-wrap justify-center gap-8  md:justify-between md:gap-0  mt-16">
+        <div className="mt-16 flex flex-wrap justify-center  gap-8 md:justify-between  md:gap-0">
           <a
             target={"_blank"}
             rel="noreferrer"
             href="https://www.facebook.com/feliciano.veraromero.58"
           >
             <Host
-              className="bg-manuel bg-center bg-cover"
+              className="bg-manuel bg-cover bg-center"
               title="Gracias por el apoyo!"
               subTitle="Manuel Vera"
             />
@@ -84,7 +89,7 @@ export default function Index() {
             href="https://www.tiktok.com/@kikis_404"
           >
             <Host
-              className="bg-kikis bg-center bg-cover"
+              className="bg-kikis bg-cover bg-center"
               title="Sin miedo al exito!"
               subTitle="kikis_404"
             />
@@ -93,29 +98,14 @@ export default function Index() {
       </section>
 
       {/* ANCHOR Information */}
-      <section className="flex flex-wrap justify-center gap-4 my-12 md:gap-0  md:justify-between md:my-40">
+      <section className="my-12 flex flex-wrap justify-center gap-4 md:my-40  md:justify-between md:gap-0">
         <Post title="El y Yo">
           <p>
-            Elyyo, donde el amor de Dios encuentra su eco en cada canción. 
-            ¡Bienvenidos a un viaje espiritual único, diseñado especialmente para ti!"
+            Elyyo, donde el amor de Dios encuentra su eco en cada canción.
+            ¡Bienvenidos a un viaje espiritual único, diseñado especialmente
+            para ti!"
           </p>
         </Post>
-
-       
-{/* 
-        <Post title="¡Síguenos!">
-          <a
-            className="flex items-center gap-4"
-            target={"blank"}
-            href="https://www.facebook.com/profile.php?id=100076177904911"
-          >
-            <img
-              className="w-8 h-8"
-              src="https://1.bp.blogspot.com/-S8HTBQqmfcs/XN0ACIRD9PI/AAAAAAAAAlo/FLhccuLdMfIFLhocRjWqsr9cVGdTN_8sgCPcBGAYYCw/s1600/f_logo_RGB-Blue_1024.png"
-              alt="facebook"
-            />
-          </a>
-        </Post> */}
       </section>
     </>
   );
