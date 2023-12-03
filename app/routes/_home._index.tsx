@@ -17,6 +17,10 @@ export default function Index() {
         id="play"
         className="flex flex-col items-center my-12 md:flex-row md:justify-around md:my-24  md:h-[30rem]"
       >
+        <div className="bg-red-500 rounded-xl h-56 w-56 overflow-hidden">
+          <img src="/img/player/paloma.jpeg" />
+        </div>
+
         <div className="my-8 md:m-0">
           <Player />
         </div>
@@ -35,7 +39,7 @@ export default function Index() {
               <Link
                 to={`/program/${programa.id}`}
                 key={programa.locutor}
-                className={`bg-gray-special rounded-sm w-96 h-64 md:w-[25em] capitalize 
+                className={`bg-gray-special rounded-sm w-96 h-64 tablet:w-96 capitalize 
                  cursor-pointer bg-center ${programa.image}`}
               >
                 <div className="h-full flex flex-col justify-end hover:translate-y-9 transition-all ease-in-out">
