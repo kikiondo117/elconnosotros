@@ -9,7 +9,6 @@ export default function HomeLayout() {
         <header className="py-4">
           <Navbar />
         </header>
-        <WhatsAppButton phoneNumber="52 55 8795 2622" />
 
         <Outlet />
       </div>
